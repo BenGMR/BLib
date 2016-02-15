@@ -5,10 +5,10 @@ using System.Text;
 using System.Data.SqlClient;
 using System.Data;
 
-namespace BLib.SQL
+namespace BLibUtils.SQL
 {
     /// <summary>
-    /// A better implementation of ZeroLibrary's SqlEngine class and ALib's Non-existent SqlEngine
+    /// A simple wrapper class for SQL connections
     /// </summary>
 
     public class SQLEngine

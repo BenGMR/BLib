@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using MonoBrick.NXT;
 
-namespace BLib.MonoBrick
+namespace BLibUtils.MonoBrick
 {
     public class BTouchSensor : TouchSensor
     {

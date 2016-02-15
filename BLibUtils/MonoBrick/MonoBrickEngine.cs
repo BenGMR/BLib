@@ -6,7 +6,7 @@ using MonoBrick.NXT;
 using System.Timers;
 using System.Diagnostics;
 
-namespace BLib.MonoBrick
+namespace BLibUtils.MonoBrick
 {
     /// <summary>
     /// A simple MonoBrick Engine to make life slightly easier for those using it.
