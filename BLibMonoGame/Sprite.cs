@@ -203,9 +203,19 @@ namespace BLibMonoGame
             set { _layerDepth = value; }
         }
 
+        protected bool _useCenterOrigin;
+        public bool UseCenterOrigin
+        {
+            get{ return _useCenterOrigin; } //if true, set origin to center
+            set{ _useCenterOrigin = value; if(_useCenterOrigin) SetOriginToCenter(); else _origin = Vector2.Zero;}
+        }
+
         public virtual void Update(GameTime gameTime)
         {
-
+            if (_useCenterOrigin)
+            {
+                SetOriginToCenter();
+            }
         }
 
         public virtual void Draw(SpriteBatch batch)

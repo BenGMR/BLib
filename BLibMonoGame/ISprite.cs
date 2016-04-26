@@ -7,7 +7,7 @@ using Microsoft.Xna.Framework;
 
 namespace BLibMonoGame
 {
-    public interface ISprite
+    public interface ISprite : IPositionable
     {
         void Update(GameTime gameTime);
         void Draw(SpriteBatch batch);
