@@ -48,12 +48,8 @@ namespace BLibMonoGame
         /// <returns></returns>
         public static double VectorToDegreeAngle(this Vector2 vectorToConvert)
         {
-            return (Math.Atan2(vectorToConvert.X, vectorToConvert.Y) * (180 / Math.PI.ToFloat()));
+            return (Math.Atan2(vectorToConvert.X, -vectorToConvert.Y) * (180 / Math.PI.ToFloat()));
         }
-
-
-
-        
     }
 }
 
