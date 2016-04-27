@@ -49,15 +49,15 @@ namespace BLibMonoGame
         public Vector2 Scale
         {
             get { return _scale; }
-            set { _scale = value; }
+            set { _scale = value;}
         }
 
         private Vector2 _origin;
 
         public Vector2 Origin
         {
-            get { return _origin * Scale; }
-            set { _origin = value; _origin *= Scale; }
+            get { return _origin; }
+            set { _origin = value;}
         }
 
         protected SpriteEffects _effect;
@@ -67,8 +67,6 @@ namespace BLibMonoGame
             get { return _effect; }
             set { _effect = value; }
         }
-
-
 
         private Rectangle _hitBox;
 
@@ -222,7 +220,7 @@ namespace BLibMonoGame
         {
             if (_visible)
             {
-                batch.Draw(_texture, _position, _frame, _tint, _rotation, Origin, _scale, _effect, _layerDepth);
+                batch.Draw(_texture, _position, Frame, _tint, _rotation, Origin, _scale, _effect, _layerDepth);
             }
         }
 
@@ -244,10 +242,10 @@ namespace BLibMonoGame
         {
             if (_frame == null)
             {
-                 Origin = new Vector2(_texture.Width / 2, _texture.Height / 2);
+                _origin = new Vector2((_texture.Width) / 2, (_texture.Height) / 2);
                 return;
             }
-            Origin = new Vector2(_frame.Value.Width / 2, _frame.Value.Height / 2);
+            _origin = new Vector2((_frame.Value.Width) / 2, (_frame.Value.Height) / 2);
         }
     }
 }
